@@ -1,14 +1,15 @@
-@font-face {
+@font-face { font-family: "Inter" ;
+    src : [Inter](https://fonts.google.com/specimen/Inter);
      }
 
      /* RESET */
 
 
 *,*::after,*::before {
-    margin: ;
-    padding: ;
-    box-sizing: ;
-    font-family: ;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box ;
+    font-family: "Inter",sans-serif;
 }
 
 
@@ -19,9 +20,16 @@
 :root {
 /* COLORS */
 
+--PRIMARY: hsl(75, 94%, 57%);
+
+--WHITE: hsl(0, 0%, 100%);
+--GREY: hsl(0, 0%, 20%);
+--DARKGREY: hsl(0, 0%, 12%);
+--OFFBLACK: hsl(0, 0%, 8%);
+--Yellow : 
+
 
 /* FONTS */
-
 
 /* BORDERS */
 
@@ -31,16 +39,49 @@
 
        /* UTILITY-CLASSES */
 
+       img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 100px;
+        width: 25%;
+       }
+
 
 
        /* HTML */
 
+html {
+    background-color: var(--DARKGREY) ;
+    
+}
 
        /* BODY */
+     /*   ### Body Copy
+
+- Font size (paragraph): 14px */
+
+body {
+    max-width:fit-content;
+    height: auto;
+    margin: 5% auto;
+    background-color: var(--OFFBLACK);
+    border-radius: 20px;
+    padding: 15px;
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+
+    
+}
 
 
 
        /* HEADER */
+
+       header {
+       /*  display: flex;
+        flex-flow: column nowrap; */
+       }
 
        /* MAIN */
 
@@ -49,10 +90,58 @@
 
        /* FIGURE */
 
+       .header__div {
+        color: var(--PRIMARY);
+        display: block;
+        margin-bottom: 20px;
+        font-weight: 400;
+       }
+
+       .header__figcaption {
+        color: var(--WHITE);
+        margin-bottom: 10px;
+        font-weight: 700;
+       }
+
+       .header__img {
+        margin: 20px 0;
+       }
+
 
 
        /* PARAGRAPHS */
+       p {
+        font-size: 0.9rem;
+        color: var(--WHITE);
+        margin-bottom: 15px;
+        font-weight: 400 ;
+        padding: 0 37px;
+       }
 
 
        /* Hs */
 
+
+       /* DIV */
+
+       .main__div {
+        
+        margin: 10px;
+        padding:10px;
+        background-color: var(--GREY);
+        font-size: 0.9rem;
+        border-radius: 7px;
+        color: var(--WHITE);
+        font-weight: 600;
+       }
+
+       /* As */
+
+       a:any-link {
+        text-decoration: none;
+       }
+
+       .main__a :is(:hover,a:focus ){
+        background-color: var(--PRIMARY);
+        color: var(--DARKGREY);
+       }
